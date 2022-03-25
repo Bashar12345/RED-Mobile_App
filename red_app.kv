@@ -1,84 +1,148 @@
-
+#:kivy 2.1.0
 Main_layout:
 
-<Main_layout@MDGridLayout>:
-	 cols:1
-	 rows:5
-	 nav_box:
-     Button:
-	 	 text:'Hello' 
-		  size: '40dp', '40dp' 
-		  pos: '100dp', '200dp'
-     Button:
-	 	 text:'Hello2' 
-		  size: '40dp', '40dp' 
-		  pos: '200dp', '200dp'
-     Button:
-	 	 text:'Hello2' 
-		  size: '40dp', '40dp' 
-		  pos: '200dp', '200dp'
+<Main_layout>:
+	 orientation:'vertical'
+	 size: root.width, root.height
+	 padding: 5
+	 spacing: '10dp'
+	 Label:
+	 	 text:'hello'
+	 header:
 
-     Label:
-	 	 text:'Hello' 
-		  size: '40dp', '40dp' 
-		  pos: '300dp', '200dp' 
-		  color: 1, 0,0,1
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-<nav_box@BoxLayout>:
-	 orientation: 'vertical'
-	 Button:
-	 	 text: "Bashar"
-		  size: '40dp', '40dp'
-		  pos: '50dp','60dp'
-		  	 
-	
+
+     #tab_button:
+
+
+<header@GridLayout>:
+	 cols:3
+	 	 rows:1
+		  Button:
+		  	 text:'Menu'
+			   size_hint:None, None
+			   width: '50dp'
+			   height: '45dp'
+
+# 		  GridLayout:
+# 		  	 cols:3
+# 			   row:1
+# 			   Button:
+# 			   	 text:'Menu'
+# 					size_hint:None, None
+# 					#size: '40dp', '40dp'
+# 					width: '50dp'
+# 					height: '45dp'
+# 					#pos: '200dp', '200dp'
+# 			   Label:
+# 			   	 text:'Menu'
+# 					size_hint:None, None
+# 					#size: '40dp', '40dp'
+# 					width: '50dp'
+# 					height: '45dp'
+# 			   Button:
+# 			   	 text:'Menu'
+# 					size_hint:None, None
+# 					#size: '40dp', '40dp'
+# 					width: '50dp'
+# 					height: '45dp'
+
+
+# <box_layout@MDBoxLayout>:
+# 	 orientation:'horizontal'
+# 	 height:'45dp'
+# 	 Button:
+# 	 	 text:'menu'
+# 		  size_hint:.2, None
+
+
+# <nav_box>:
+# 	 GridLayout:
+# 	 	 cols: 1
+# 		  rows: 5
+# 		  rows_minimum:{1:.2}
+# 		  Button:
+# 		  	 text:'A'
+# 			   size: '40dp', '40dp'
+# 			   pos: '200dp', '200dp'
+# 		  Button:
+# 		  	 text:'B'
+# 			   size: '40dp', '40dp'
+# 			   pos: '200dp', '200dp'
+# 		  Button:
+# 		  	 text:'C'
+# 			   size: '40dp', '40dp'
+# 			   pos: '200dp', '200dp'
+# 		  Button:
+# 		  	 text:'D'
+# 			   size: '40dp', '40dp'
+# 			   pos: '200dp', '200dp'
+
+
+
+# <tab_button@StackLayout>:
+#      Button:
+# 	 	 text:'A'
+# 		  size: '40dp', '40dp'
+# 		  pos: '100dp', '200dp'
+#      Button:
+# 	 	 text:'B'
+# 		  size: '40dp', '40dp'
+# 		  pos: '200dp', '200dp'
+#      Button:
+# 	 	 text:'C'
+# 		  size: '40dp', '40dp'
+# 		  pos: '200dp', '200dp'
+#      Button:
+# 	 	 text:'D'
+# 		  size: '40dp', '40dp'
+# 		  pos: '100dp', '200dp'
+    #  Button:
+	#  	 text:'Hello2'
+	# 	  size: '40dp', '40dp'
+	# 	  pos: '200dp', '200dp'
+    #  Button:
+	#  	 text:'Hello2'
+	# 	  size: '40dp', '40dp'
+	# 	  pos: '200dp', '200dp'
+
+
+
 	# 	  MDLabel:
-	# 	  text:'Hello Bashar' 
-	# 	  size: '40dp', '40dp' 
+	# 	  text:'Hello Bashar'
+	# 	  size: '40dp', '40dp'
 	# 	  pos: '300dp', '200dp'
 	# 	  color: 1, 0,0,1
     #  Button:
-	#  	 text:'Hello2' 
-	# 	  size: '40dp', '40dp' 
+	#  	 text:'Hello2'
+	# 	  size: '40dp', '40dp'
 	# 	  pos: '200dp', '200dp'
     #  Button:
-	#  	 text:'Hello' 
-	# 	  size: '40dp', '40dp' 
+	#  	 text:'Hello'
+	# 	  size: '40dp', '40dp'
 	# 	  pos: '100dp', '200dp'
     #  Button:
-	#  	 text:'Hello2' 
-	# 	  size: '40dp', '40dp' 
+	#  	 text:'Hello2'
+	# 	  size: '40dp', '40dp'
 	# 	  pos: '200dp', '200dp'
     #  Label:
-	#  	 text:'Hello Bashar' 
-	# 	  size: '40dp', '40dp' 
-	# 	  pos: '300dp', '200dp' 
-	# 	  color: 1, 0,0,1 
+	#  	 text:'Hello Bashar'
+	# 	  size: '40dp', '40dp'
+	# 	  pos: '300dp', '200dp'
+	# 	  color: 1, 0,0,1
 
 
- 
-	 
-	 
-		 
 
-# <box_layout@MDBoxLayout>:
-# 	 orientation: 'vertical'
-# 	 MDBoxLayout:
-# 	 	 orientation: 'vertical'
-# 		  MDLabel:
-# 		  	 text: "Bashar"
 
+
+
+
+
+		# Button:
+		# 	text:'menu'
+		# 	size_hint:.6, None
+		# Button:
+		# 	text:'menu'
+		# 	size_hint:.2, None
 
 
 
@@ -87,22 +151,22 @@ Main_layout:
 
 # <MainWidget>:
 #      Button:
-# 	 	 text:'Hello' 
-# 		  size: '40dp', '40dp' 
+# 	 	 text:'Hello'
+# 		  size: '40dp', '40dp'
 # 		  pos: '100dp', '200dp'
 #      Button:
-# 	 	 text:'Hello2' 
-# 		  size: '40dp', '40dp' 
+# 	 	 text:'Hello2'
+# 		  size: '40dp', '40dp'
 # 		  pos: '200dp', '200dp'
 #      Label:
-# 	 	 text:'Hello' 
-# 		  size: '40dp', '40dp' 
-# 		  pos: '300dp', '200dp' 
+# 	 	 text:'Hello'
+# 		  size: '40dp', '40dp'
+# 		  pos: '300dp', '200dp'
 # 		  color: 1, 0,0,1
 
 
-# <MDWidget>: 
-# 	 text: 'Bashar' 
+# <MDWidget>:
+# 	 text: 'Bashar'
 # 	 size_hint: .5, None
 #      height: self.width
 #      radius: self.height / 2
