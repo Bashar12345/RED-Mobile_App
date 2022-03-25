@@ -13,6 +13,7 @@ from kivymd.uix.button import (MDFlatButton, MDRectangleFlatButton,
                                MDRoundFlatButton, MDTextButton)
 from kivymd.uix.label import MDLabel
 
+Builder.load_file("red_app.kv")
 
 class RootScreen(MDScreen):
     pass
@@ -37,11 +38,12 @@ class tab_button(sl, MDAdaptiveWidget):
 class header(gl, MDAdaptiveWidget):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
-        l = MDLabel(text='A')
-        self.add_widget(l)
         pass
 
-
+class main_screen(gl,MDAdaptiveWidget):
+	def __init__(self, **kwargs):
+		super().__init__(**kwargs)
+		pass
 # class MDBoxLayout(bl, MDAdaptiveWidget):
 # 	b1=MDRoundFlatButton(text='A button')
 # 	b2=MDRoundFlatButton(text='b button')
@@ -66,7 +68,7 @@ class Main_layout(bl, MDAdaptiveWidget):  # GridLayout
 
 class red_app(MDApp):
     def build(self):
-        return Builder.load_file("red_app.kv")
+        return Main_layout()
 
 
 # def build(self):

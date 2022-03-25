@@ -1,27 +1,98 @@
 #:kivy 2.1.0
-Main_layout:
+
 
 <Main_layout>:
 	 orientation:'vertical'
 	 size: root.width, root.height
 	 padding: 5
 	 spacing: '10dp'
-	 Label:
-	 	 text:'hello'
-	 header:
-
-
-     #tab_button:
-
-
-<header@GridLayout>:
-	 cols:3
-	 	 rows:1
+	 MDBoxLayout:
+	 	 orientation:'horizontal'
+		  size_hint:None,None
+		  weight:.7
 		  Button:
 		  	 text:'Menu'
-			   size_hint:None, None
+			   size_hint:.2, None
+			   
+		  MDLabel:
+		  	 text:'RED'
+			   size_hint:.6, None
+		  Button:
+		  	 text:'Menu'
+			   size_hint:.2, None
+			   
+	 header:
+	 main_screen:
+
+
+<main_screen>:
+	 GridLayout:
+	 	 cols:1
+		  rows:5
+		  Button:
+		  	 text:"Menu"
+			   size_hint: None,None
 			   width: '50dp'
 			   height: '45dp'
+		  Button:
+		  	 text:"Menu"
+			   size_hint: None,None
+			   width: '50dp'
+			   height: '45dp'
+		  Button:
+		  	 text:"Menu"
+			   size_hint: None,None
+			   width: '50dp'
+			   height: '45dp'
+		  Button:
+		  	 text:"Menu"
+			   size_hint: None,None
+			   width: '50dp'
+			   height: '45dp'
+     #tab_button:
+
+<header>:
+	 GridLayout:
+	 	 cols:3
+		  rows:1
+		  rows_minimum:{1:.2}
+		  Button:
+		  	 text:"Menu"
+			   size_hint: None,None
+			   width: '50dp'
+			   height: '45dp'
+		  Button:
+		  	 text:"Menu"
+			   size_hint: None,None
+			   width: '50dp'
+			   height: '45dp'
+		  Button:
+		  	 text:"Menu"
+			   size_hint: None,None
+			   width: '50dp'
+			   height: '45dp'
+
+
+
+
+# <header@GridLayout>:
+# 	 cols:3
+# 	 	 rows:1
+# 		  Button:
+# 		  	 text:'Menu'
+# 			   size_hint:None, None
+# 			   width: '50dp'
+# 			   height: '45dp'
+# 		  Button:
+# 		  	 text:'Menu2'
+# 			   size_hint:None, None
+# 			   width: '50dp'
+# 			   height: '45dp'
+# 		  Button:
+# 		  	 text:'Menu3'
+# 			   size_hint:None, None
+# 			   width: '50dp'
+# 			   height: '45dp'
 
 # 		  GridLayout:
 # 		  	 cols:3
@@ -47,12 +118,14 @@ Main_layout:
 # 					height: '45dp'
 
 
-# <box_layout@MDBoxLayout>:
-# 	 orientation:'horizontal'
-# 	 height:'45dp'
-# 	 Button:
-# 	 	 text:'menu'
-# 		  size_hint:.2, None
+# <box_layout>:
+# 	 MDBoxLayout:
+# 	 	 orientation:'horizontal'
+# 		  height:'45dp'
+# 		  Button:
+# 		  	 text:'Menu'
+# 			   size_hint:.2, None
+
 
 
 # <nav_box>:
