@@ -1,15 +1,22 @@
 #:kivy 2.1.0
 Main_layout:
 
+	 
+
 <Main_layout>:
 	 orientation:'vertical'
 	 size: root.width, root.height
 	 padding: 5
 	 spacing: '10dp'
 	 #Line:
+	 MDToolbar:
+	 	 title: "RED"
+		  right_action_items:[["icon : 'data/logo/kivy-icon-256.png'",lambda x: app.login()]]
+		#   MDIconButton:
+		#   	 icon: "data/logo/kivy-icon-256.png"
 	 GridLayout:
 	 	 cols:1
-		  rows:5
+		  #rows:5
 		  #Line:
 		  header:
 		  Button:
@@ -20,6 +27,8 @@ Main_layout:
 			   height: '45dp'
 		  MDLabel:
 		  	 text:root.btn_txt
+			   font_name: 'fonts/lcd.ttf'
+			   color: 1,.5,.5,1
 		  Button:
 		  	 text:"Menu3"
 			   size_hint: None,None
@@ -30,37 +39,47 @@ Main_layout:
 			   size_hint: None,None
 			   width: '50dp'
 			   height: '45dp'
-			   
-	 
-	 main_screen:
-
 
 <main_screen>:
-	 GridLayout:
-	 	 cols:1
-		  rows:5
-		  Button:
-		  	 text:"Menu"
-			   size_hint: None,None
-			   width: '50dp'
-			   height: '45dp'
+     Button:
+	 	 text:'Hello'
+		  size: '40dp', '40dp'
+		  pos: '100dp', '200dp'
+     Button:
+	 	 text:'Hello2'
+		  size: '40dp', '40dp'
+		  pos: '200dp', '200dp'
+     Label:
+	 	 text:'Hello'
+		  size: '40dp', '40dp'
+		  pos: '300dp', '200dp'
+		  color: 1, 0,0,1
+# <main_screen>:
+# 	 GridLayout:
+# 	 	 cols:1
+# 		  rows:5
+# 		  Button:
+# 		  	 text:"Menu"
+# 			   size_hint: None,None
+# 			   width: '50dp'
+# 			   height: '45dp'
 
-		  Button:
-		  	 text:"Menu"
-			   size_hint: None,None
-			   width: '50dp'
-			   height: '45dp'
-		  Button:
-		  	 text:"Menu"
-			   size_hint: None,None
-			   width: '50dp'
-			   height: '45dp'
-		  Button:
-		  	 text:"Menu"
-			   size_hint: None,None
-			   width: '50dp'
-			   height: '45dp'
-     #tab_button:
+# 		  Button:
+# 		  	 text:"Menu"
+# 			   size_hint: None,None
+# 			   width: '50dp'
+# 			   height: '45dp'
+# 		  Button:
+# 		  	 text:"Menu"
+# 			   size_hint: None,None
+# 			   width: '50dp'
+# 			   height: '45dp'
+# 		  Button:
+# 		  	 text:"Menu"
+# 			   size_hint: None,None
+# 			   width: '50dp'
+# 			   height: '45dp'
+
 
 <header>:
 	 GridLayout:

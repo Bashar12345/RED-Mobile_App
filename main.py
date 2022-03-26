@@ -8,8 +8,11 @@ from kivy.uix.widget import Widget
 from kivymd.app import MDApp
 from kivymd.uix import MDAdaptiveWidget
 from kivymd.uix.screen import MDScreen
+from kivy.uix.screenmanager import ScreenManager
 from kivy.properties import StringProperty
+from kivy.core.window import Window
 
+Window.size = (300,500) 
 from kivymd.uix.button import (MDFlatButton, MDRectangleFlatButton,
                                MDRoundFlatButton, MDTextButton)
 from kivymd.uix.label import MDLabel
@@ -39,12 +42,20 @@ class tab_button(sl, MDAdaptiveWidget):
 class header(gl, MDAdaptiveWidget):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
-        pass
+        self.cols = 3
+        self.rows = 1
+        self.rows_minimum={0,.25} 
+class UI(ScreenManager):
+    pass
+    # def __init__(self, **kwargs):
+    #     super(main_screen,self).__init__(**kwargs)
+    #     self.cols = 1
+    #     self.rows = 5
+    #     b=MDRectangleFlatButton(text='Hello',size= ('40dp', '40dp'), pos= ('100dp', '200dp'))
+    #    self.add_widget(b)
 
-class main_screen(gl,MDAdaptiveWidget):
-	def __init__(self, **kwargs):
-		super().__init__(**kwargs)
-		pass
+#sm=ScreenManager()
+
 # class MDBoxLayout(bl, MDAdaptiveWidget):
 # 	b1=MDRoundFlatButton(text='A button')
 # 	b2=MDRoundFlatButton(text='b button')
@@ -75,7 +86,19 @@ class Main_layout(bl, MDAdaptiveWidget):
 
 class red_app(MDApp):
     def build(self):
-        return Main_layout()
+        Builder.load_file('layout.kv')
+        return UI()
+
+
+
+
+
+
+
+    # def login(self,MDIconButton):
+    #     b = MDIconButton(icon="data/logo/kivy-icon-256.png")
+    #     self.add_widget(b)
+    #     print('loged in')
 
 
 # def build(self):
