@@ -1,27 +1,37 @@
 #:kivy 2.1.0
-
+Main_layout:
 
 <Main_layout>:
 	 orientation:'vertical'
 	 size: root.width, root.height
 	 padding: 5
 	 spacing: '10dp'
-	 MDBoxLayout:
-	 	 orientation:'horizontal'
-		  size_hint:None,None
-		  weight:.7
+	 #Line:
+	 GridLayout:
+	 	 cols:1
+		  rows:5
+		  #Line:
+		  header:
 		  Button:
-		  	 text:'Menu'
-			   size_hint:.2, None
-			   
+		  	 on_press: root.on_click()
+		  	 text:"Test Button"
+			   size_hint: None,None
+			   width: '80dp'
+			   height: '45dp'
 		  MDLabel:
-		  	 text:'RED'
-			   size_hint:.6, None
+		  	 text:root.btn_txt
 		  Button:
-		  	 text:'Menu'
-			   size_hint:.2, None
+		  	 text:"Menu3"
+			   size_hint: None,None
+			   width: '50dp'
+			   height: '45dp'
+		  Button:
+		  	 text:"Menu2"
+			   size_hint: None,None
+			   width: '50dp'
+			   height: '45dp'
 			   
-	 header:
+	 
 	 main_screen:
 
 
@@ -34,6 +44,7 @@
 			   size_hint: None,None
 			   width: '50dp'
 			   height: '45dp'
+
 		  Button:
 		  	 text:"Menu"
 			   size_hint: None,None
@@ -71,7 +82,6 @@
 			   size_hint: None,None
 			   width: '50dp'
 			   height: '45dp'
-
 
 
 

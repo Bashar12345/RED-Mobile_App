@@ -8,12 +8,13 @@ from kivy.uix.widget import Widget
 from kivymd.app import MDApp
 from kivymd.uix import MDAdaptiveWidget
 from kivymd.uix.screen import MDScreen
+from kivy.properties import StringProperty
 
 from kivymd.uix.button import (MDFlatButton, MDRectangleFlatButton,
                                MDRoundFlatButton, MDTextButton)
 from kivymd.uix.label import MDLabel
 
-Builder.load_file("red_app.kv")
+#Builder.load_file("red_app.kv")
 
 class RootScreen(MDScreen):
     pass
@@ -54,7 +55,7 @@ class main_screen(gl,MDAdaptiveWidget):
 # 	self.add_widget(b3)
 # 	pass
 
-class Main_layout(bl, MDAdaptiveWidget):  # GridLayout
+class Main_layout(bl, MDAdaptiveWidget):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
     # b1=BaseRoundButton(text='A button')
@@ -64,6 +65,12 @@ class Main_layout(bl, MDAdaptiveWidget):  # GridLayout
     # self.add_widget(b1)
     # self.add_widget(b2)
     # self.add_widget(b3)
+    btn_txt= StringProperty('clicked')
+    def on_click(self):
+        self.btn_txt=" you clicked"
+        print('clicked')
+
+
 
 
 class red_app(MDApp):
