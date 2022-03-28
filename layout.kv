@@ -1,51 +1,168 @@
 #: import images_path kivymd.images_path
-<CustomTexInput@TextInput>
-	 background_normal: f'{images_path}transperent.png'
-	 background_active: self.background_normal
-	 foreground_color: 0,0,0,.5
-	 hint_test_color: app.theme_cls.disabled_hit_text_color
-	 padding:"8dp","12dp","8dp",0
-	 cursor_color:0,0,0,.2
-	 size_hint_y:None
-	 height:"38dp"
-	 canvas.after:
-	 	 Color:
-		  	 rgba:0,0, 0.005, 0.07
-			   RoundRectangle:
-			   	 pos:self.pos
-					size:self.size
-					radious: [8,]
+
+
+
+
+<page_manager_UI>:
+      home_page:
+	  login_page:
+
+
+
+	 
+
+
+
+
+
+<home_page>:
+      name:'homepage'
+      Button:
+            text:'dfssfs'
+
+
+
+
+
+
+
+
+
+
 # CustomTexInput:
 # 	 hint_text:'Enter search'
+#[Custom_Card@MDCard,RoundedRectangularElevationBehavior]:
 
-<UI>:
-	 MDScreen:
-	 	 name:"homepage"
-		  MDBoxLayout:
-		  	 pos_hint: {'top': 1.0}
-			   size_hint_y:None
-			   height:'60dp'
-			   spacing:'10dp'
-			   padding:'12dp',0,'12dp',0
-			   FitImage:
-			   	 source:'images/05.jpg'
-					mipimap: True
-					size_hint: None, None
-					size:'40dp','40dp'
-					pos_hint: {'center_y': 0.5}
-					radius:[30,]
-			   MDLabel:
-			   	 text:'RED'
-					font_style:'H5'
-					bold:True
-			   MDIconButton:
-			   	 icon:'hand-heart'
-					pos_hint: {'center_y': 0.5}
-					radius:[30,]
-			   MDIconButton:
-			   	 icon:'logout'
-					pos_hint: {'center_y': 0.5}
-					radius:[30,]
-		  MDBoxLayout:
-		  	 size_hint_y:.15
-			 ScrollView:
+
+# <home_page>:
+# 	 MDScreen:
+# 	 	 name:"homepage"
+# 		  padding:'25dp'
+# 		  MDBoxLayout:
+# 		  	 pos_hint: {'top': 1.0}
+# 			   size_hint_y:None
+# 			   height:'60dp'
+# 			   spacing:'10dp'
+# 			   padding:'12dp',0,'12dp',0
+# 			   FitImage:
+# 			   	 id:im
+# 			   	 source:'images/05.jpg'
+# 					mipmap: True
+# 					size_hint: None, None
+# 					size:'40dp','40dp'
+# 					pos_hint: {'center_y': 0.5}
+# 					radius:[30,]
+# 			   MDLabel:
+# 			   	 text:'RED'
+# 					font_style:'H5'
+# 					bold:True
+# 			   MDIconButton:
+# 			   	 icon:'hand-heart'
+# 					pos_hint: {'center_y': 0.5}
+# 					radius:[30,]
+# 			   MDIconButton:
+# 			   	 icon:'logout'
+# 					pos_hint: {'center_y': 0.5}
+# 					radius:[30,]
+# 		  MDBoxLayout:
+# 		  	 pos_hint:{'center_y':.84}
+# 			   MDFillRoundFlatButton:
+# 			   	 text:'some'
+# 					size:'40dp','40dp'
+# 		  MDBoxLayout:
+# 		  	 size_hint_y:.15
+# 			   pos_hint: {'top':.88}
+# 			   #padding: '10dp'
+# 			   ScrollView:
+# 			   	 do_scroll_y: False
+# 					do_scroll_x: True
+# 					size: self.size
+# 					GridLayout:
+# 						 size_hint: None,None
+# 						 height:self.minimum_height
+# 						 width: self.minimum_width
+# 						 rows:1
+# 						 row_force_default:True
+# 						 row_default_height:'45dp'
+# 						 spacing:'15dp'
+# 						 MDRoundFlatButton:
+# 						 	 text:'History of Islam'
+# 							  size_hint:None,None
+# 							  width: '40dp'
+# 							  height: '25dp'
+
+# 		  MDBoxLayout:
+# 		  	 size_hint_y:.35
+# 			   pos_hint:{'top':.74}
+# 			   #padding:'10dp'
+# 			   spacing:'10dp'
+# 			   FitImage:
+# 			   	 source:'images/demo_pic1.jpg'
+# 					mipmap: True
+# 					size_hint: None, None
+# 					size:'120dp','180dp'
+# 					pos_hint: {'center_y': 0.5}
+# 					radius:[5,]
+# 			   FitImage:
+# 			   	 source:'images/demo_pic2.jpg'
+# 					mipmap: True
+# 					size_hint: None, None
+# 					size:'120dp','180dp'
+# 					pos_hint: {'center_y': 0.5}
+# 					radius:[5,]
+
+
+
+
+
+# 		#   MDBoxLayout:
+# 		#   	 size_hint_y:.35
+# 		# 	   padding:'10dp'
+# 		# 	   spacing:'10dp'
+# 		# 	   pos_hint:{'top':.44}
+# 		# 	   CustomTexInput:
+# 		# 	   	 hint_text:"search"
+# 		  MDCard:
+# 		  	 md_bg_color: [0,1,1,1]
+# 			   size_hint:1,.2
+# 			   pos_hint:{'top':.41}
+# 		  MDCard:
+# 		  	 md_bg_color: [1,0,1,1]
+# 			   size_hint:1,.2
+# 			   pos_hint:{'top':.38}
+			   
+# 		  MDCard:
+# 		  	 md_bg_color: [1,1,0,1]
+# 			   size_hint:1,.2
+# 			   pos_hint:{'top':.33}
+# 		  MDCard:
+# 		  	 md_bg_color:[1,.4,1,.5]
+# 			   size_hint:1,.2
+# 			   pos_hint:{'top':.29}
+
+
+
+
+		#   FloatLayout:
+		#   	 pos_hint:{'top':.45}
+		# 	   MDCard:
+
+		# 	   	 md_bg_color: [0, 0, 1, 1]
+		# 	   	 size_hint:1,.2
+		# 			text: "text"
+		# 	   MDCard:
+
+		# 	   	 md_bg_color: [0, 0, 1, 1]
+		# 	   	 size_hint:1,.2
+		# 			text: "text"
+		# 	   MDCard:
+
+		# 	   	 md_bg_color: [0, 0, 1, 1]
+		# 	   	 size_hint:1,.2
+		# 			text: "text"
+			# Custom_Card:
+			# 	 line_color: 0.2, 0.2, 0.2, 0.8
+			# 	 	 style: 'elevated'
+			# 		  text: 'Elevated'
+			# 		  md_bg_color:get_color_from_hex('#f6eeee')
+
