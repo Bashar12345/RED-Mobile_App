@@ -1,0 +1,295 @@
+<Page_manager>:
+	Home_page:
+	Login_page:
+
+<Home_page>:
+	name:'homepage'
+	MDBoxLayout:
+		orientation: 'vertical'
+		size_hint:1,1
+		#pos_hint: {'top':1.0}
+		padding: '2dp'
+        ScrollView:
+			do_scroll_y:True
+			do_scroll_x:False
+			size_hint:1,1
+			size:self.size
+			bar_color:1,1,1,1
+			GridLayout:
+				size_hint_y: None
+				height:self.minimum_height
+				width: self.minimum_width
+				cols:1
+				#row_force_default:True
+				#row_default_height:'45dp'
+				spacing:'9dp'
+
+				Header:                                   #toolbar
+
+				Nav_pills:                                 # tab
+
+				Shots:                                    # shots
+
+				MDCard:
+					md_bg_color: [0,1,1,1]
+					size_hint_y:None
+					#pos_hint:{'top':.41}
+				MDCard:
+					md_bg_color: [1,0,1,1]
+					size_hint_y:None
+					#pos_hint:{'top':.38}
+					
+				MDCard:
+					md_bg_color: [1,1,0,1]
+					size_hint_y:None
+					#pos_hint:{'top':.33}
+				MDCard:
+					md_bg_color:[1,.4,1,.5]
+					size_hint_y:None
+					#pos_hint:{'top':.29}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<Header>:                               # toolbar
+	#pos_hint: {'top': 1.0}
+	size_hint_y:None
+	height:'60dp'
+	spacing:'10dp'
+	padding:'12dp',0,'12dp',0
+	FitImage:
+		id:im
+		source:'images/05.jpg'
+		mipmap: True
+		size_hint: None, None
+		size:'40dp','40dp'
+		pos_hint: {'center_y': 0.5}
+		radius:[30,]
+	MDLabel:
+		text:'RED'
+		font_style:'H5'
+		bold:True
+	MDIconButton:
+		icon:'hand-heart'
+		pos_hint: {'center_y': 0.5}
+		radius:[30,]
+	MDIconButton:
+		icon:'logout'
+		pos_hint: {'center_y': 0.5}
+		radius:[30,]
+
+
+
+
+<Shots>:                               # shots
+	#pos_hint:{'top':.64}
+	size_hint_y:None
+	height:'182dp'
+	padding:'2dp'
+	spacing:'10dp'
+	FitImage:
+		source:'images/demo_pic1.jpg'
+		mipmap: True
+		size_hint: None, None
+		size:'120dp','180dp'
+		pos_hint: {'center_y': 0.5}
+		radius:[5,]
+	FitImage:
+		source:'images/demo_pic2.jpg'
+		mipmap: True
+		size_hint: None, None
+		size:'120dp','180dp'
+		pos_hint: {'center_y': 0.5}
+		radius:[5,]
+
+
+
+
+<Nav_pills>:                               # tab
+	size_hint_y:None
+	height:'40dp'
+	spacing:'4dp'
+	padding:'12dp',0,'12dp',0
+	#pos_hint: {'center_y':0.85}
+
+	#padding: '10dp'
+	ScrollView:
+		do_scroll_y: False
+		do_scroll_x: True
+		size: self.size
+		bar_color:1,1,1,1
+		GridLayout:
+			size_hint_x: None
+			height:self.minimum_height
+			width: self.minimum_width
+			rows:1
+			spacing:'10dp'
+			
+			MDRoundFlatButton:
+				text:'History of Islam'
+				size_hint:None,None
+				width: '35dp'
+				height: '20dp'
+				pos_hint: {'center_y': 0.5}
+				on_press: root.manager("login_page")
+			MDRoundFlatButton:
+				text:"Quran's fact"
+				size_hint:None,None
+				width: '40dp'
+				height: '25dp'
+				pos_hint: {'center_y': 0.5}
+			MDRoundFlatButton:
+				text:'Haddits'
+				size_hint:None,None
+				width: '40dp'
+				height: '25dp'
+				pos_hint: {'center_y': 0.5}
+			MDRoundFlatButton:
+				text:'Science'
+				size_hint:None,None
+				width: '40dp'
+				height: '25dp'
+				pos_hint: {'center_y': 0.5}
+			MDRoundFlatButton:
+				text:'Desh'
+				size_hint:None,None
+				width: '40dp'
+				height: '25dp'
+				pos_hint: {'center_y': 0.5}
+		#   MDBoxLayout:
+		#   	 size_hint_y:.35
+		# 	   padding:'10dp'
+		# 	   spacing:'10dp'
+		# 	   pos_hint:{'top':.44}
+		# 	   CustomTexInput:
+		# 	   	 hint_text:"search"
+
+
+
+
+	# MDRoundFlatButton:
+	# 	text:'profile'
+	# 	pos_hint:{'center_x': 0.5,'center_y': 0.5}
+	# 	on_press: root.manager.current = 'login_page'
+
+
+
+
+
+
+
+
+
+
+<Login_page>:
+	name:'login_page'
+	MDRoundFlatButton:
+		text:'login Please'
+		pos_hint:{'center_x': 0.5,'center_y': 0.5}
+
+
+
+
+# MDBoxLayout:                               # toolbar
+# 	#pos_hint: {'top': 1.0}
+# 	size_hint_y:None
+# 	height:'60dp'
+# 	spacing:'10dp'
+# 	padding:'12dp',0,'12dp',0
+# 	FitImage:
+# 		id:im
+# 		source:'images/05.jpg'
+# 		mipmap: True
+# 		size_hint: None, None
+# 		size:'40dp','40dp'
+# 		pos_hint: {'center_y': 0.5}
+# 		radius:[30,]
+# 	MDLabel:
+# 		text:'RED'
+# 		font_style:'H5'
+# 		bold:True
+# 	MDIconButton:
+# 		icon:'hand-heart'
+# 		pos_hint: {'center_y': 0.5}
+# 		radius:[30,]
+# 	MDIconButton:
+# 		icon:'logout'
+# 		pos_hint: {'center_y': 0.5}
+# 		radius:[30,]
+
+
+
+# MDBoxLayout:                               # tab
+# 	size_hint_y:None
+# 	height:'40dp'
+# 	spacing:'4dp'
+# 	padding:'12dp',0,'12dp',0
+# 	#pos_hint: {'center_y':0.85}
+
+# 	#padding: '10dp'
+# 	ScrollView:
+# 		do_scroll_y: False
+# 		do_scroll_x: True
+# 		size: self.size
+# 		bar_color:1,1,1,1
+# 		GridLayout:
+# 			size_hint_x: None
+# 			height:self.minimum_height
+# 			width: self.minimum_width
+# 			rows:1
+# 			spacing:'10dp'
+			
+# 			MDRoundFlatButton:
+# 				text:'History of Islam'
+# 				size_hint:None,None
+# 				width: '35dp'
+# 				height: '20dp'
+# 				pos_hint: {'center_y': 0.5}
+# 			MDRoundFlatButton:
+# 				text:'History of Islam'
+# 				size_hint:None,None
+# 				width: '40dp'
+# 				height: '25dp'
+# 				pos_hint: {'center_y': 0.5}
+# 			MDRoundFlatButton:
+# 				text:'History of Islam'
+# 				size_hint:None,None
+# 				width: '40dp'
+# 				height: '25dp'
+# 				pos_hint: {'center_y': 0.5}
+
+
+# MDBoxLayout:                               
+# 	#pos_hint:{'top':.64}
+# 	size_hint_y:None
+# 	height:'160dp'
+# 	#padding:'10dp'
+# 	spacing:'10dp'
+# 	FitImage:
+# 		source:'images/demo_pic1.jpg'
+# 		mipmap: True
+# 		size_hint: None, None
+# 		size:'120dp','180dp'
+# 		pos_hint: {'center_y': 0.5}
+# 		radius:[5,]
+# 	FitImage:
+# 		source:'images/demo_pic2.jpg'
+# 		mipmap: True
+# 		size_hint: None, None
+# 		size:'120dp','180dp'
+# 		pos_hint: {'center_y': 0.5}
+# 		radius:[5,]
