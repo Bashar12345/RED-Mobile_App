@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="/home/b/Desktop/RED-Mobile_App/kivy_venv"
+VIRTUAL_ENV="/home/b/Desktop/red_kivy_mobile_app_/kivy_venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

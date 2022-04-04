@@ -1,2 +1,1 @@
-# RED-Mobile_App
-You can learn the History through this app. (Basically its an learning app)
+# red_kivy_mobile_app_

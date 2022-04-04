@@ -29,7 +29,7 @@ end
 # unset irrelevant variables
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV "/home/b/Desktop/RED-Mobile_App/kivy_venv"
+set -gx VIRTUAL_ENV "/home/b/Desktop/red_kivy_mobile_app_/kivy_venv"
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/bin" $PATH

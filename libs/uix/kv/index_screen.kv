@@ -1,0 +1,27 @@
+<IndexScreen>
+    # name:'index'
+
+    MDBoxLayout:
+        orientation: "vertical"
+
+        MDToolbar:
+            title: "Empty Activity"
+            right_action_items: [["dots-vertical", lambda x: x]]
+        MDToolbar:
+            title: "Empty Activity"
+            right_action_items: [["dots-vertical", lambda x: x]]
+        MDToolbar:
+            title: "Empty Activity"
+            right_action_items: [["dots-vertical", lambda x: x]]
+
+               
+
+        Widget:
+            MDRoundFlatButton:
+                text:"goback"
+                on_release: root.manager.current = 'home'
+
+            MDLabel:
+                size_hint: .5, .5
+                text: "something"
+                color:1,1,1,.2
