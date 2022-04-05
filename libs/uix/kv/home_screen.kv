@@ -2,7 +2,7 @@
 <HomeScreen>
     # name:'home'
 
-	MDBoxLayout:
+	MDBoxLayout: 
 		orientation: 'vertical'
 		size_hint:1,1
 		#pos_hint: {'top':1.0}
@@ -37,6 +37,7 @@
 						do_scroll_x: True
 						size: self.size
 						bar_color:1,1,1,1
+						bar_inactive_color:1,1,1,1
 						GridLayout:
 							size_hint_x: None
 							height:self.minimum_height
@@ -54,27 +55,27 @@
 							MDRoundFlatButton:
 								text:"Quran's fact"
 								size_hint:None,None
-								width: '40dp'
-								height: '25dp'
+								width: '35dp'
+								height: '20dp'
 								pos_hint: {'center_y': 0.5}
 								on_release: root.manager.current = "login_page"
 							MDRoundFlatButton:
 								text:'Haddits'
 								size_hint:None,None
-								width: '40dp'
-								height: '25dp'
+								width: '35dp'
+								height: '20dp'
 								pos_hint: {'center_y': 0.5}
 							MDRoundFlatButton:
 								text:'Science'
 								size_hint:None,None
-								width: '40dp'
-								height: '25dp'
+								width: '35dp'
+								height: '20dp'
 								pos_hint: {'center_y': 0.5}
 							MDRoundFlatButton:
 								text:'Desh'
 								size_hint:None,None
-								width: '40dp'
-								height: '25dp'
+								width: '35dp'
+								height: '20dp'
 								pos_hint: {'center_y': 0.5}
 
 				Shots:                                    # shots
@@ -93,10 +94,18 @@
 					size_hint_y:None
 					#pos_hint:{'top':.33}
 				MDCard:
-					md_bg_color:[1,.4,1,.5]
+					md_bg_color: [0,1,1,1]
 					size_hint_y:None
-					#pos_hint:{'top':.29}
-
+					#pos_hint:{'top':.41}
+				MDCard:
+					md_bg_color: [1,0,1,1]
+					size_hint_y:None
+					#pos_hint:{'top':.38}
+					
+				MDCard:
+					md_bg_color: [1,1,0,1]
+					size_hint_y:None
+					#pos_hint:{'top':.33}
 
 
 
@@ -122,7 +131,7 @@
 	padding:'12dp',0,'12dp',0
 	FitImage:
 		id:im
-		source: "/assets/images/05.jpg"
+		source: f"{environ['RED_Mobile_App_ROOT']}/assets/images/05.jpg"
 		mipmap: True
 		size_hint: None, None
 		size:'40dp','40dp'
@@ -151,14 +160,14 @@
 	padding:'2dp'
 	spacing:'10dp'
 	FitImage:
-		source:f"{environ['RED-Mobile_App_ROOT']}/assets/images/05.jpg"
+		source:f"{environ['RED_Mobile_App_ROOT']}/assets/images/demo_pic1.jpg"
 		mipmap: True
 		size_hint: None, None
 		size:'120dp','180dp'
 		pos_hint: {'center_y': 0.5}
 		radius:[5,]
 	FitImage:
-		source:'/assets/images/demo_pic2.jpg'
+		source:f"{environ['RED_Mobile_App_ROOT']}/assets/images/demo_pic2.jpg"
 		mipmap: True
 		size_hint: None, None
 		size:'120dp','180dp'
