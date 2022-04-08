@@ -17,6 +17,9 @@ Window.size = (300, 500)
 class RED_Mobile_App(MDApp):  # NOQA: N801
     def __init__(self, **kwargs):
         super(RED_Mobile_App, self).__init__(**kwargs)
+        self.title = "RED"
+        self.icon = f"{os.environ['RED_Mobile_App_ROOT']}/assets/images/05.jpg"
+
         Window.soft_input_mode = "below_target"
         self.title = "ReD_App"
 

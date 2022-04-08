@@ -1,7 +1,7 @@
 from kivymd.uix.screen import MDScreen
+from kivymd.theming import ThemableBehavior
 
-
-class IndexScreen(MDScreen):
+class IndexScreen(ThemableBehavior,MDScreen):
     """
     Example Screen.
     """

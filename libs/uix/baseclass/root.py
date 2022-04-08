@@ -8,6 +8,22 @@ import utils
 
 utils.load_kv("root.kv")
 
+# KV = """
+# #:import FadeTransition kivy.uix.screenmanager.FadeTransition
+# #:import ShrineRegisterScreen libs.baseclass.register_screen.ShrineRegisterScreen
+# #:import ShrineRootScreen libs.baseclass.shrine_root_screen.ShrineRootScreen
+
+
+# # for serialize the screens
+# ScreenManager:
+#     transition: FadeTransition()
+
+#     ShrineRegisterScreen:
+#         name: "register screen"
+
+#     ShrineRootScreen:
+#         name: "shrine root screen"
+# """
 
 class Root(ScreenManager):
     """
