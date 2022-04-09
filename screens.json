@@ -10,27 +10,27 @@
         "object": "HomeScreen()"
     },
     "history": {
-        "import": "from libs.uix.baseclass.home_screen import HistoryScreen",
+        "import": "from libs.uix.baseclass.history import HistoryScreen",
         "kv": "libs/uix/kv/history.kv",
         "object": "HistoryScreen()"
     },
     "quran_fact": {
-        "import": "from libs.uix.baseclass.home_screen import Quran_factScreen",
+        "import": "from libs.uix.baseclass.quran_fact import Quran_factScreen",
         "kv": "libs/uix/kv/quran_fact.kv",
         "object": "Quran_factScreen()"
     },
     "haddits": {
-        "import": "from libs.uix.baseclass.home_screen import HadditsScreen",
+        "import": "from libs.uix.baseclass.haddits import HadditsScreen",
         "kv": "libs/uix/kv/haddits.kv",
         "object": "HadditsScreen()"
     },
     "science": {
-        "import": "from libs.uix.baseclass.home_screen import ScienceScreen",
+        "import": "from libs.uix.baseclass.science import ScienceScreen",
         "kv": "libs/uix/kv/science.kv",
-        "object": "HomeScreen()"
+        "object": "ScienceScreen()"
     },
     "desh": {
-        "import": "from libs.uix.baseclass.home_screen import DeshScreen",
+        "import": "from libs.uix.baseclass.desh import DeshScreen",
         "kv": "libs/uix/kv/desh.kv",
         "object": "DeshScreen()"
     }

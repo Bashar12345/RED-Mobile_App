@@ -42,8 +42,14 @@ class RED_Mobile_App(HotReloaderApp, MDApp):  # NOQA: N801
     # Class to watch from *.py files
     # You need to register the *.py files in libs/uix/baseclass/*.py
     CLASSES = {'Root': 'libs.uix.baseclass.root',
-     'HomeScreen': 'libs.uix.baseclass.home_screen'}
-     #,'IndexScreen': 'libs.uix.baseclass.home_screen'}  # NOQA: F821
+     'HomeScreen': 'libs.uix.baseclass.home_screen',
+     'IndexScreen': 'libs.uix.baseclass.index_screen',
+     'HistoryScreen': 'libs.uix.baseclass.history',
+     'Quran_factScreen': 'libs.uix.baseclass.quran_fact',
+     'HadditsScreen': 'libs.uix.baseclass.hadditss',
+     'ScienceScreen': 'libs.uix.baseclass.science',
+     'DeshScreen': 'libs.uix.baseclass.desh',
+     }  # NOQA: F821
 
     # Auto Reloader Path
     AUTORELOADER_PATHS = [

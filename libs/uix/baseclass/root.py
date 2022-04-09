@@ -8,27 +8,10 @@ import utils
 
 utils.load_kv("root.kv")
 
-# KV = """
-# #:import FadeTransition kivy.uix.screenmanager.FadeTransition
-# #:import ShrineRegisterScreen libs.baseclass.register_screen.ShrineRegisterScreen
-# #:import ShrineRootScreen libs.baseclass.shrine_root_screen.ShrineRootScreen
 
-
-# # for serialize the screens
-# ScreenManager:
-#     transition: FadeTransition()
-
-#     ShrineRegisterScreen:
-#         name: "register screen"
-
-#     ShrineRootScreen:
-#         name: "shrine root screen"
-# """
 
 class Root(ScreenManager):
-    """
-    The Root (or Assembler) of the App.
-    """
+    """The Root (or Assembler) of the App."""
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
@@ -68,3 +51,22 @@ class Root(ScreenManager):
             self.add_widget(
                 screen_object
             )  # finally adding it to the screen manager
+
+
+
+# KV = """
+# #:import FadeTransition kivy.uix.screenmanager.FadeTransition
+# #:import ShrineRegisterScreen libs.baseclass.register_screen.ShrineRegisterScreen
+# #:import ShrineRootScreen libs.baseclass.shrine_root_screen.ShrineRootScreen
+
+
+# # for serialize the screens
+# ScreenManager:
+#     transition: FadeTransition()
+
+#     ShrineRegisterScreen:
+#         name: "register screen"
+
+#     ShrineRootScreen:
+#         name: "shrine root screen"
+# """
