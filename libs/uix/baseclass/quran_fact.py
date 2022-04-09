@@ -6,4 +6,4 @@ class Quran_factScreen(ThemableBehavior,MDScreen):
     Example Screen.
     """
 
-    pass
+    pass 

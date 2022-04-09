@@ -12,7 +12,7 @@
     "history": {
         "import": "from libs.uix.baseclass.home_screen import HistoryScreen",
         "kv": "libs/uix/kv/history.kv",
-        "object": "HomeScreen()"
+        "object": "HistoryScreen()"
     },
     "quran_fact": {
         "import": "from libs.uix.baseclass.home_screen import Quran_factScreen",
