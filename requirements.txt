@@ -1,4 +1,3 @@
-kivy==2.0
 plyer
 kivymd_extensions.sweetalert
 kaki

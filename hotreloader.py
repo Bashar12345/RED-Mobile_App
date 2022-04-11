@@ -20,36 +20,35 @@ from kaki.app import App as HotReloaderApp  # NOQA: E402
 # Logger.setLevel(LOG_LEVELS["debug"])
 
 
-#from kivy.factory import Factory  # NOQA: E402
+from kivy.factory import Factory  # NOQA: E402
 from kivy.core.window import Window  # NOQA: E402
 from kivymd.app import MDApp  # NOQA: E402
 
-from libs.uix.baseclass.root import Root  # NOQA: E402
+#from libs.uix.baseclass.root import Root  # NOQA: E402
 
 # This is needed for supporting Windows 10 with OpenGL < v2.0
 if platform.system() == "Windows":
     os.environ["KIVY_GL_BACKEND"] = "angle_sdl2"
 
-KV_FOLDER = os.path.join(os.getcwd(), "libs", "uix", "kv")
+#KV_FOLDER = os.path.join(os.getcwd(), "libs", "uix", "kv")
 
 
 class RED_Mobile_App(HotReloaderApp, MDApp):  # NOQA: N801
     DEBUG = 1  # To enable Hot Reload
 
     # *.kv files to watch
-    KV_FILES = [os.path.join(KV_FOLDER, i) for i in os.listdir(KV_FOLDER)]
+    #KV_FILES = [os.path.join(KV_FOLDER, i) for i in os.listdir(KV_FOLDER)]
 
     # Class to watch from *.py files
     # You need to register the *.py files in libs/uix/baseclass/*.py
-    CLASSES = {'Root': 'libs.uix.baseclass.root',
-     'HomeScreen': 'libs.uix.baseclass.home_screen',
-     'IndexScreen': 'libs.uix.baseclass.index_screen',
-     'HistoryScreen': 'libs.uix.baseclass.history',
-     'Quran_factScreen': 'libs.uix.baseclass.quran_fact',
-     'HadditsScreen': 'libs.uix.baseclass.hadditss',
-     'ScienceScreen': 'libs.uix.baseclass.science',
-     'DeshScreen': 'libs.uix.baseclass.desh',
-     }  # NOQA: F821
+    CLASSES = {
+    'Page_manager':'RED_Mobile_App'}
+    #  'IndexScreen': 'libs.uix.baseclass.index_screen',
+    #  'HistoryScreen': 'libs.uix.baseclass.history',
+    #  'Quran_factScreen': 'libs.uix.baseclass.quran_fact',
+    #  'HadditsScreen': 'libs.uix.baseclass.hadditss',
+    #  'ScienceScreen': 'libs.uix.baseclass.science',
+    #  'DeshScreen': 'libs.uix.baseclass.desh',  # NOQA: F821
 
     # Auto Reloader Path
     AUTORELOADER_PATHS = [
@@ -67,12 +66,12 @@ class RED_Mobile_App(HotReloaderApp, MDApp):  # NOQA: N801
         self.theme_cls.accent_palette = "Amber"
         self.theme_cls.accent_hue = "500"
 
-        self.theme_cls.theme_style = "Light"
+        self.theme_cls.theme_style = "Dark"
 
     def build_app(self,*args):  # build_app works like build method
         print("App auto relaoding")
-        return Root()   #For only testing perpouse
+        return Factory.Page_manager()   #For only testing perpouse
 
 
 if __name__ == "__main__":
-    red_kivy_mobile_app_().run()
+    RED_Mobile_App().run()

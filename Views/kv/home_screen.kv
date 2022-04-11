@@ -1,9 +1,13 @@
 #: import environ os.environ
+#: import get_color_from_hex kivy.utils.get_color_from_hex
 <HomeScreen>
-    # name:'home'
+	id:home_layout
+    name:'home'
 
 	MDBoxLayout: 
+		
 		orientation: 'vertical'
+		#adaptive_size: True
 		size_hint:1,1
 		#pos_hint: {'top':1.0}
 		padding: '2dp'
@@ -91,7 +95,8 @@
 						text: "Title"
 						theme_text_color: "Secondary"
 						size_hint_y: None
-						height: self.texture_size[1]
+						#height: self.texture_size[1]
+				DataCard:
 
 				MDCard:
 					md_bg_color: [1,0,1,1]
@@ -119,6 +124,25 @@
 
 
 
+<DataCard>:
+	padding: 16
+	md_bg_color: [1,0,1,1]
+	size_hint_y:None
+	size: self.size
+	ext: "Title"
+	MDRelativeLayout:
+		size_hint: None, None
+		size: root.size
+		MDIconButton:
+			icon: "dots-vertical"
+			pos:
+				root.width - (self.width + root.padding[0] + dp(4)), \
+				root.height - (self.height + root.padding[0] + dp(4))
+		MDLabel:
+			id: label
+			text: root.cardtext
+			adaptive_size: True
+			color: .2, .2, .2, .8
 
 
 
