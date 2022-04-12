@@ -6,6 +6,10 @@ class IndexScreen(ThemableBehavior,MDScreen):
     Example Screen.
     """
 
+    pass
+
+
+
 # class Login_page(Screen):
 #     def __init__(self, **kwargs):
 #         super().__init__(**kwargs)
@@ -14,4 +18,3 @@ class IndexScreen(ThemableBehavior,MDScreen):
 #         # b3=MDRoundFlatButton(text='c button')
 
 #         self.add_widget(b1)
-    pass

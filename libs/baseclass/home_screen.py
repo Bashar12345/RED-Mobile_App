@@ -1,3 +1,46 @@
+
+from kivymd.app import MDApp
+from kivy.factory import Factory
+from kivymd.uix.label import MDLabel
+from kivy.core.window import Window
+from kivymd.uix.screen import MDScreen
+from kivy.uix.screenmanager import Screen,ScreenManager
+from kivymd.uix.button import MDRoundFlatButton
+from kivy.uix.behaviors import ButtonBehavior
+from kivymd.uix.boxlayout import MDBoxLayout
+from kivymd.uix.behaviors import RoundedRectangularElevationBehavior
+from kivy.lang.builder import Builder
+from kivymd.uix.card import MDCard
+from kivy.properties import StringProperty
+from kivy.utils import get_color_from_hex
+
+class Shots(MDBoxLayout):
+    pass
+
+
+
+class Header(MDBoxLayout):
+    pass
+
+class DataCard(MDCard, RoundedRectangularElevationBehavior):
+        
+    cardtext = ''  #StringProperty()
+    pass
+
+    
+
+
+
+class HomeScreen(MDScreen):
+	"""
+	Example Screen.
+	"""
+	pass
+
+
+
+
+home_screen_string ='''
 #: import environ os.environ
 #: import get_color_from_hex kivy.utils.get_color_from_hex
 <HomeScreen>
@@ -241,4 +284,4 @@
 
 
 
-# MDBoxLayout:                               # toolbar
+# MDBoxLayout:                               # toolbar'''

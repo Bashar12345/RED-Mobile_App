@@ -42,7 +42,7 @@ class RED_Mobile_App(HotReloaderApp, MDApp):  # NOQA: N801
     # Class to watch from *.py files
     # You need to register the *.py files in libs/uix/baseclass/*.py
     CLASSES = {
-    'Page_manager':'RED_Mobile_App'}
+    'Page_manager':'app_root'}
     #  'IndexScreen': 'libs.uix.baseclass.index_screen',
     #  'HistoryScreen': 'libs.uix.baseclass.history',
     #  'Quran_factScreen': 'libs.uix.baseclass.quran_fact',
@@ -66,7 +66,7 @@ class RED_Mobile_App(HotReloaderApp, MDApp):  # NOQA: N801
         self.theme_cls.accent_palette = "Amber"
         self.theme_cls.accent_hue = "500"
 
-        self.theme_cls.theme_style = "Dark"
+        self.theme_cls.theme_style = "Light"
 
     def build_app(self,*args):  # build_app works like build method
         print("App auto relaoding")
