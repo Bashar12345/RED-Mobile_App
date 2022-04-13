@@ -1,5 +1,23 @@
+from kivy.uix.screenmanager import ScreenManager
+from libs.baseclass.index_screen import IndexScreen
 
-from kivy.factory import Factory 
+from libs.baseclass.home_screen import HomeScreen
+
+from libs.baseclass.history import HistoryScreen
+
+from libs.baseclass.quran_fact import Quran_factScreen
+
+from libs.baseclass.haddits import HadditsScreen
+
+from libs.baseclass.science import ScienceScreen
+
+from libs.baseclass.desh import DeshScreen
+
+
+
+
+
+#from kivy.factory import Factory 
 # libs.baseclass.register_screen.ShrineRegisterScreen
 
 PAGES = """
@@ -14,9 +32,8 @@ PAGES = """
 
 Page_manager:
     transition: FadeTransition()
-
-    # IndexScreen:
-    #     name: "index"
+    IndexScreen:
+        name: "index"
 
     HomeScreen:
         name: "home"
@@ -38,22 +55,22 @@ Page_manager:
 
 """
 
-class Page_manager(Factory.ScreenManager):
+class Page_manager(ScreenManager):
     """The Root (or Assembler) of the App."""
     pass
 
+pages_manage = Page_manager()
+pages_manage.add_widget(IndexScreen(name ="index"))
+pages_manage.add_widget(HomeScreen(name="home"))
+pages_manage.add_widget(HistoryScreen(name="history"))
+pages_manage.add_widget(Quran_factScreen(name="quran_fact"))
+pages_manage.add_widget(HadditsScreen(name="haddits"))
+pages_manage.add_widget(ScienceScreen(name="science"))
+pages_manage.add_widget(DeshScreen(name="desh"))
+
+#pages_manage.current('')
 
 
 
-pages="""
-#:import FadeTransition kivy.uix.screenmanager.FadeTransition
-#:import HomeScreen Views.home_screen.HomeScreen
-#:import IndexScreen Views.index_screen.IndexScreen
 
-ScreenManager:
-    IndexScreen:
-        name: "index"
 
-    HomeScreen:
-        name: "home"
-"""

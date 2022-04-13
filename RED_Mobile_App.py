@@ -4,7 +4,7 @@ import platform
 from pathlib import Path
 from kivy.lang import Builder
 from kivymd.app import MDApp
-from app_root_screen_manager import PAGES
+from app_root_screen_manager import PAGES,Page_manager
 
 
 

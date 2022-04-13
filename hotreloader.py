@@ -42,7 +42,7 @@ class RED_Mobile_App(HotReloaderApp, MDApp):  # NOQA: N801
     # Class to watch from *.py files
     # You need to register the *.py files in libs/uix/baseclass/*.py
     CLASSES = {
-    'Page_manager':'app_root'}
+    'Page_manager':'RED_Mobile_App'}
     #  'IndexScreen': 'libs.uix.baseclass.index_screen',
     #  'HistoryScreen': 'libs.uix.baseclass.history',
     #  'Quran_factScreen': 'libs.uix.baseclass.quran_fact',
