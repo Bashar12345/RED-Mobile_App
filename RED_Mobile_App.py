@@ -47,7 +47,7 @@ class RED_Mobile_App(MDApp):  # NOQA: N801
         self.title = "ReD_App"
 
         #self.theme_cls.primary_palette = "Blue"
-        self.theme_cls.primary_palette = "Red"
+        self.theme_cls.primary_palette = "LightBlue"
         self.theme_cls.primary_hue = "500"
 
         self.theme_cls.accent_palette = "Amber"
@@ -55,12 +55,26 @@ class RED_Mobile_App(MDApp):  # NOQA: N801
 
         self.theme_cls.theme_style = "Dark"
 
+        
     def build(self):
         #view_css = Builder.load_string(KV)
         #Uix = Builder.load_file(pages)
         Uix = Builder.load_string(PAGES)
+        print('kola')
         return Uix
+    
 
+    def validate_user(self,email,password):
+        user_email= email
+        print(user_email)
+        #print(self.ids)
+        user_password= password
+       
+        email_id =user_email.text
+        paswd = user_password.text
+        print(email_id)
+        print(paswd)
+# khane authenticate baki ase
 
 RED_Mobile_App().run()
 

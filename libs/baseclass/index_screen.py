@@ -2,13 +2,8 @@ from kivymd.uix.screen import MDScreen
 from kivymd.theming import ThemableBehavior
 
 class IndexScreen(ThemableBehavior,MDScreen):
-    """
-    Example Screen.
-    """
-
     pass
-
-
+ 
 
 # class Login_page(Screen):
 #     def __init__(self, **kwargs):

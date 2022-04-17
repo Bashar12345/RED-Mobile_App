@@ -60,13 +60,13 @@ class RED_Mobile_App(HotReloaderApp, MDApp):  # NOQA: N801
         Window.soft_input_mode = "below_target"
         self.title = "ReD_App"
 
-        self.theme_cls.primary_palette = "Blue"
+        self.theme_cls.primary_palette = "LightBlue"
         self.theme_cls.primary_hue = "500"
 
         self.theme_cls.accent_palette = "Amber"
         self.theme_cls.accent_hue = "500"
 
-        self.theme_cls.theme_style = "Light"
+        self.theme_cls.theme_style = "Dark"
 
     def build_app(self,*args):  # build_app works like build method
         print("App auto relaoding")
