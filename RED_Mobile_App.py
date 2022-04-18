@@ -14,6 +14,11 @@ from kivy.core.window import Window
 #from kivy.uix.screenmanager import Screen,ScreenManager
 
 
+#authentiication
+
+from kivyauth.google_auth import initialize_google, login_google, logout_google
+
+
 # This is needed for supporting Windows 10 with OpenGL < v2.0
 if platform.system() == "Windows":
     os.environ["KIVY_GL_BACKEND"] = "angle_sdl2"
@@ -38,6 +43,8 @@ for kv_file in os.listdir(KV_DIR):
 
 
 class RED_Mobile_App(MDApp):  # NOQA: N801
+
+
     def __init__(self, **kwargs):
         super(RED_Mobile_App, self).__init__(**kwargs)
         self.title = "RED"
@@ -55,15 +62,30 @@ class RED_Mobile_App(MDApp):  # NOQA: N801
 
         self.theme_cls.theme_style = "Dark"
 
+
+    def on_start(self):
+
+        if auto_login(login_providers.google):
+            self.current_provider = login_providers.google
+        elif auto_login(login_providers.facebook):
+            self.current_provider = login_providers.facebook
+        elif auto_login(login_providers.github):
+            self.current_provider = login_providers.github
+        elif auto_login(login_providers.twitter):
+            self.current_provider = login_providers.twitter
         
     def build(self):
+        client_id ='1081373476459-4r0cgu38fcm7a2niq4oe4kvsi7tf1r4d.apps.googleusercontent.com'
+        client_secret='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'
+
+        initialize_google(self.after_login, self.error_listener,client_id,client_secret)
         #view_css = Builder.load_string(KV)
         #Uix = Builder.load_file(pages)
         Uix = Builder.load_string(PAGES)
         print('kola')
         return Uix
     
-
+    def 
     def validate_user(self,email,password):
         user_email= email
         print(user_email)
