@@ -27,8 +27,8 @@ from kivymd.app import MDApp  # NOQA: E402
 #from libs.uix.baseclass.root import Root  # NOQA: E402
 
 # This is needed for supporting Windows 10 with OpenGL < v2.0
-if platform.system() == "Windows":
-    os.environ["KIVY_GL_BACKEND"] = "angle_sdl2"
+# if platform.system() == "Windows":
+#     os.environ["KIVY_GL_BACKEND"] = "angle_sdl2"
 
 #KV_FOLDER = os.path.join(os.getcwd(), "libs", "uix", "kv")
 

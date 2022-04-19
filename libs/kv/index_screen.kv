@@ -69,5 +69,5 @@
             MDFillRoundFlatButton:
                 id: button_next
                 text: "Sign in"
-                on_release: root.parent.current = "home",app.validate_user(email,password)
+                on_release: root.manager.current='home'#app.validate_user(email,password)
                 md_bg_color: gch(colors[root.theme_cls.primary_palette]["200"])

@@ -160,6 +160,7 @@
 	padding:'12dp',0,'12dp',0
 	FitImage:
 		id:im
+		# source: f"{environ['RED_Mobile_App_ROOT']}/assets/images/05.jpg"
 		source: f"{environ['RED_Mobile_App_ROOT']}/assets/images/05.jpg"
 		mipmap: True
 		size_hint: None, None
@@ -170,6 +171,11 @@
 		text:'RED'
 		font_style:'H5'
 		bold:True
+	MDLabel:
+		id:username
+		text:''
+		font_style:'H6'
+		bold:True
 	MDIconButton:
 		icon:'hand-heart'
 		pos_hint: {'center_y': 0.5}
@@ -178,7 +184,7 @@
 		icon:'logout'
 		pos_hint: {'center_y': 0.5}
 		radius:[30,]
-		on_release: app.root.current = "index"
+		on_release: app.logout()#app.root.current = "index"
 
 
 

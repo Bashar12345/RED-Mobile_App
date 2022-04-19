@@ -12,16 +12,15 @@ from app_root_screen_manager import PAGES,Page_manager
 #from kivy.lang import Builder
 from kivy.core.window import Window
 #from kivy.uix.screenmanager import Screen,ScreenManager
-
-
-#authentiication
-
-from kivyauth.google_auth import initialize_google, login_google, logout_google
-
-
 # This is needed for supporting Windows 10 with OpenGL < v2.0
+
 if platform.system() == "Windows":
     os.environ["KIVY_GL_BACKEND"] = "angle_sdl2"
+
+#authentiication
+from utils import *
+from kivyauth.google_auth import initialize_google, login_google, logout_google
+
 
 #Window.size = (300, 500)
 
@@ -61,31 +60,14 @@ class RED_Mobile_App(MDApp):  # NOQA: N801
         self.theme_cls.accent_hue = "500"
 
         self.theme_cls.theme_style = "Dark"
-
-
-    def on_start(self):
-
-        if auto_login(login_providers.google):
-            self.current_provider = login_providers.google
-        elif auto_login(login_providers.facebook):
-            self.current_provider = login_providers.facebook
-        elif auto_login(login_providers.github):
-            self.current_provider = login_providers.github
-        elif auto_login(login_providers.twitter):
-            self.current_provider = login_providers.twitter
         
-    def build(self):
-        client_id ='1081373476459-4r0cgu38fcm7a2niq4oe4kvsi7tf1r4d.apps.googleusercontent.com'
-        client_secret='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'
 
-        initialize_google(self.after_login, self.error_listener,client_id,client_secret)
-        #view_css = Builder.load_string(KV)
-        #Uix = Builder.load_file(pages)
+    def build(self):
+        #view_css = Builder.load_string(KV)  #Uix = Builder.load_file(pages)
         Uix = Builder.load_string(PAGES)
-        print('kola')
         return Uix
-    
-    def 
+
+
     def validate_user(self,email,password):
         user_email= email
         print(user_email)
@@ -116,4 +98,38 @@ RED_Mobile_App().run()
     #         )
 
 
+
+    # def build(self):
+    #     client_id ='secret'
+    #     client_secret='secret'
+
+    #     initialize_google(self.after_login, self.error_listener,client_id,client_secret)
+
+    #     #view_css = Builder.load_string(KV)  #Uix = Builder.load_file(pages)
+    #     Uix = Builder.load_string(PAGES)
+
+    #     return Uix
+
+    # # def on_start(self):
+    # #     if auto_login(login_providers.google):
+    # #         self.current_provider = login_providers.google
+    # def login(self):
+    #     login_google()
+
+
+    # def after_login(self,name,email,photo_uri):
+    #     #self.hide_login_progress()
+    #     print(name)
+    #     #self.root.im.source = photo_url
+    #     #self.root.username.text = name
+    #     self.root.manager.current = 'home'
+
+    # def logout(self):
+    #     logout_google(self.after_logout)
+
+    # def after_logout(self):
+    #     self.root.current= 'index'
+        
+    # def error_listener(self):
+    #     print('login failed')
 
